@@ -9,4 +9,4 @@ Notable changes are:
 - Two-pane IP address monitor to display twice the IPs
 - Network interfaces disappear when you disable them
 - Network activity history is actively monitored and shown in a graph
-- Four CPU cores instead of just one.
+- Four CPU cores instead of just one
