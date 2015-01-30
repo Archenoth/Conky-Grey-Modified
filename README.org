@@ -37,13 +37,13 @@ change or remove the =/host= filesystem from Conky.
 
 You can remove it by running the following in this folder:
 #+BEGIN_SRC shell-script
-  sed -i '74d' conkyrc_grey
+  sed -i '74d' conkyrc_grey && sed -i '201,221d' conky_grey.lua
 #+END_SRC
 
 Or, if you wish to simply update it with something else, you can do
 so with:
 #+BEGIN_SRC shell-script
-  find -exec sed -i -e 's#/host#/path/to/replace/with#g' {} \;
+  sed -i -e 's#/host#/path/to/replace/with#g' conky*
 #+END_SRC
 
 (Except you would replace "=/path/to/replace/with=" with your desired
