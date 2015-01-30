@@ -37,7 +37,7 @@ change or remove the =/host= filesystem from Conky.
 
 You can remove it by running the following in this folder:
 #+BEGIN_SRC shell-script
-  awk 'NR!~/^74$/' conkyrc_grey
+  sed -i '74d' conkyrc_grey
 #+END_SRC
 
 Or, if you wish to simply update it with something else, you can do
