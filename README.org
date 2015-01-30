@@ -15,7 +15,7 @@ Notable changes are:
 To install this, you first need to have [[http://conky.sourceforge.net/][Conky]]. (No, really..!)
 
 Most Linux distributions should have this in their package managers,
-so simply typing =apt-get isntall conky= or =yum install conky= with
+so simply typing =apt-get install conky= or =yum install conky= with
 root privileges should be all you need.
 
 Then, from this folder, you simply invoke:
