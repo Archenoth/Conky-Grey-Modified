@@ -1,0 +1,12 @@
+#+TITLE:Conky Grey Modified
+
+This Git repo is my modification of the amazing [[http://gnome-look.org/content/show.php/?content=137272][Conky Grey
+theme]]... (Not made by me.)
+
+[[file:./Screenshot.png]]
+
+Notable changes are:
+- Two-pane IP address monitor to display twice the IPs
+- Network interfaces disappear when you disable them
+- Network activity history is actively monitored and shown in a graph
+- Four CPU cores instead of just one.
