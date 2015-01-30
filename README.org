@@ -10,3 +10,41 @@ Notable changes are:
 - Network interfaces disappear when you disable them
 - Network activity history is actively monitored and shown in a graph
 - Four CPU cores instead of just one
+
+* Installation
+To install this, you first need to have [[http://conky.sourceforge.net/][Conky]]. (No, really..!)
+
+Most Linux distributions should have this in their package managers,
+so simply typing =apt-get isntall conky= or =yum instal conky= with
+root privileges should be all you need.
+
+Then, from this folder, you simply invoke:
+#+BEGIN_SRC shell-script
+  conky -c conkyrc_grey
+#+END_SRC
+
+Conky will then start up and fork into the background, so you can
+close the terminal you ran it from or continue working on whatever.
+
+To stop it:
+#+BEGIN_SRC shell-script
+  pkill conky
+#+END_SRC
+
+* Customizing
+Since you likely have a different disk setup than I, you may wish to
+change or remove the =/host= filesystem from Conky.
+
+You can remove it by running the following in this folder:
+#+BEGIN_SRC shell-script
+  awk 'NR!~/^74$/' conkyrc_grey
+#+END_SRC
+
+Or, if you wish to simply update it with something else, you can do
+so with:
+#+BEGIN_SRC shell-script
+  find -exec sed -i -e 's#/host#/path/to/replace/with#g' {} \;
+#+END_SRC
+
+(Except you would replace "=/path/to/replace/with=" with your desired
+path.)
