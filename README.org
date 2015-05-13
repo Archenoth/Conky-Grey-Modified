@@ -52,7 +52,7 @@ path.)
 A couple of patches are also included with Conky Grey Modified that
 will allow you to change the theme to do some pretty neat
 things. (Yes, these could have been Git commits, though this works
-without Git.)
+without Git if you just downloaded an archive of this repo.)
 
 As of the time of writing, there are two patches included:
 
