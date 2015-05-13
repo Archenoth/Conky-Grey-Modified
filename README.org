@@ -19,7 +19,7 @@ so simply typing =apt-get install conky-all= or =yum install conky=
 with root privileges should be all you need.
 
 Then, from this folder, you simply invoke:
-#+BEGIN_SRC shell-script
+#+BEGIN_SRC sh
   conky -c conkyrc_grey
 #+END_SRC
 
@@ -27,7 +27,7 @@ Conky will then start up and fork into the background, so you can
 close the terminal you ran it from or continue working on whatever.
 
 To stop it:
-#+BEGIN_SRC shell-script
+#+BEGIN_SRC sh
   pkill conky
 #+END_SRC
 
@@ -36,15 +36,55 @@ Since you likely have a different disk setup than I, you may wish to
 change or remove the =/host= filesystem from Conky.
 
 You can remove it by running the following in this folder:
-#+BEGIN_SRC shell-script
+#+BEGIN_SRC sh
   sed -i '74d' conkyrc_grey && sed -i '201,221d' conky_grey.lua
 #+END_SRC
 
 Or, if you wish to simply update it with something else, you can do
 so with:
-#+BEGIN_SRC shell-script
+#+BEGIN_SRC sh
   sed -i -e 's#/host#/path/to/replace/with#g' conky*
 #+END_SRC
 
 (Except you would replace "=/path/to/replace/with=" with your desired
 path.)
+
+A couple of patches are also included with Conky Grey Modified that
+will allow you to change the theme to do some pretty neat
+things. (Yes, these could have been Git commits, though this works
+without Git.)
+
+As of the time of writing, there are two patches included:
+
+** lots-o-lines.patch
+Lots 'o lines is a patch that adds a massive amount of lines to the
+network monitor. The idea behind this patch is that it allows you to
+make use of the extra screen real-estate on your desktop to keep
+track of network connections.
+
+To use it, in the current folder, you can simply run the following:
+#+BEGIN_SRC sh
+  patch < patches/lots-o-lines.patch
+#+END_SRC
+
+And to change it back:
+#+BEGIN_SRC sh
+  patch -R < patches/lots-o-lines.patch
+#+END_SRC
+
+** white-background.patch
+White Background is a patch that updates the theme to be usable on a
+bright (or white!) background.
+
+It does this by making the colors for the text and monitors far
+darker.
+
+Like the previous patch, to apply this one, you can run:
+#+BEGIN_SRC sh
+  patch < patches/white-background.patch
+#+END_SRC
+
+And, if you don't want it any more:
+#+BEGIN_SRC sh
+  patch -R < patches/white-background.patch
+#+END_SRC
