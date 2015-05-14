@@ -88,3 +88,18 @@ And, if you don't want it any more:
 #+BEGIN_SRC sh
   patch -R < patches/white-background.patch
 #+END_SRC
+
+** two-cpu.patch
+This patch is to switch Conky back to displaying only two CPU
+cores. This is for people that do not have four cores to display on
+the monitor.
+
+And once again, this patch can be applied like so:
+#+BEGIN_SRC sh
+  patch < patches/two-cpu.patch
+#+END_SRC
+
+And to switch it back:
+#+BEGIN_SRC sh
+  patch -R < patches/two-cpu.patch
+#+END_SRC
