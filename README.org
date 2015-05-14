@@ -57,7 +57,7 @@ will allow you to change the theme to do some pretty neat
 things. (Yes, these could have been Git commits, though this works
 without Git if you just downloaded an archive of this repo.)
 
-As of the time of writing, there are two patches included:
+As of the time of writing, there are three patches included:
 
 ** lots-o-lines.patch
 Lots 'o lines is a patch that adds a massive amount of lines to the
