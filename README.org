@@ -5,11 +5,14 @@ theme]]... (Not made by me.)
 
 [[file:./Screenshot.png]]
 
-Notable changes are:
+Notable (default) changes are:
 - Two-pane IP address monitor to display twice the IPs
 - Network interfaces disappear when you disable them
 - Network activity history is actively monitored and shown in a graph
 - Four CPU cores instead of two
+
+I say "default" because I have included a few patches and instructions
+that will let you customize most of the above.
 
 * Installation
 To install this, you first need to have [[http://conky.sourceforge.net/][Conky]]. (No, really..!)
